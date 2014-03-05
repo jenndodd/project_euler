@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Even Fibonacci Numbers</title>
+  </head>
+  <body>
+    <h1>Even Fibs</h1>
+    <script type="text/javascript">
+
+
+      var fibonacci = new Array(1, 2);
+      var fibonacciEven = new Array;
+      fibonacciEven.push(2);
+      var fibiIndex = 2;
+      var fibi = 3;
+      while ( (fibonacci[fibiIndex - 1] + fibonacci[fibiIndex - 2]) < 4000000) { 
+        fibi = fibonacci[fibiIndex - 1] + fibonacci[fibiIndex - 2];
+        fibonacci.push(fibi);
+        fibiIndex++;
+        if (fibi%2 === 0) {
+          fibonacciEven.push(fibi);
+        };
+      };
+
+      var total=0;
+      for(var i in fibonacciEven) { 
+        total += fibonacciEven[i]; 
+      };
+      console.log(total);
+
+    </script>
+  </body>
+</html>
